@@ -36,7 +36,6 @@ class Dataset(keras.utils.Sequence):
             offset = np.random.randint(-self.steps, self.steps) // 4
         elif self.val:
             idx = self.val_idx[idx]
-            offset = 0
             
         for m in range(self.batch_size):
             for n in range(self.steps):
